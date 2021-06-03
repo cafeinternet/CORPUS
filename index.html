@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cuerpo</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+</head>
+<body>
+    
+<a-scene>
+    <a-plane position="-1.74141 -1.99973 -5.46906" rotation="-90 0 0" width="4" height="4" src="./piel1.jpeg" material="" geometry="" scale="500 500 500"></a-plane>
+    <a-sky src="./fondo1.gif"></a-sky>
+
+
+    <a-entity light="color: #BBB; type: ambient" data-aframe-default-light="" aframe-injected="" scale="80 80 80" position=" 60  85 0"></a-entity>
+    <a-entity light="color: #BBB; type: ambient" data-aframe-default-light="" aframe-injected="" scale="80 80 80" position=" -60  350 0"></a-entity>
+
+
+</a-assets>
+<a-asset-item id="cuerpo1" src="./brazosmanos.gltf" ></a-asset-item>
+<a-asset-item id="cuerpo2" src="./brazosmanos22.gltf" ></a-asset-item>
+<a-asset-item id="cuerpo3" src="./brazosmanoss22.gltf" ></a-asset-item>
+<a-asset-item id="cuerpo4" src="./corpusrubrum.gltf" ></a-asset-item>
+<a-asset-item id="cuerpo5" src="./cuerpopiesybrazos.gltf" ></a-asset-item>
+</a-assets>
+
+<a-gltf-model src="#cuerpo1" material="" geometry=""scale="1 1 1" position=" -211.20 -9.3 4.5" rotation="0 -42.597 0"></a-gltf-model>
+<a-gltf-model src="#cuerpo2" material="" geometry=""scale="1 1 1" position=" -38.968 36.302 -252.76"  rotation="-82.518 0 0"></a-gltf-model>
+<a-gltf-model src="#cuerpo3" material="" geometry=""scale="1 1 1" position=" -24.482 14.194 157.542" rotation=""></a-gltf-model>
+<a-gltf-model src="#cuerpo4" material="" geometry=""scale="1 1 1" position=" -10.215.40 -2.53 4.5" rotation="-10.174 0 0"></a-gltf-model>
+<a-gltf-model src="#cuerpo5" material="" geometry=""scale="1 1 1" position=" 123.77 -3.304 4.5" rotation="0 42.713 0"></a-gltf-model>
+<a-gltf-model src="#cuerpo3" material="" geometry=""scale="3 3 3" position=" -24.482 14.194 157.542" rotation=""></a-gltf-model>
+<a-gltf-model src="#cuerpo2" material="" geometry=""scale="3 3 3" position=" -38.968 36.302 -252.76"  rotation="-82.518 0 0"></a-gltf-model>
+
+<a-entity camera="" position="-25.18277 39.53185 314.63043" wasd-controls="" rotation="-6.875493541569885 14.094761760218255 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+<a-light type="ambient" color="#FEF09C"></a-light>
+
+</a-scene>
+
+
+
+
+
+
+</body>
+</html>
