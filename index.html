@@ -23,6 +23,14 @@
 <a-asset-item id="cuerpo3" src="./brazosmanoss22.gltf" ></a-asset-item>
 <a-asset-item id="cuerpo4" src="./CORPUSRUBRUM.gltf" ></a-asset-item>
 <a-asset-item id="cuerpo5" src="./cuerpopiesybrazos.gltf" ></a-asset-item>
+    
+     <video
+            id="vid"
+            src="https://github.com/CorpusRubrum/CORPUS/blob/main/corazon.mp4"
+            loop="true"
+            crossorigin="anonymous"
+            controls="true"
+          ></video>
 </a-assets>
 
 <a-gltf-model src="#cuerpo1" material="" geometry=""scale="1 1 1" position=" -211.20 -9.3 4.5" rotation="0 -42.597 0"></a-gltf-model>
@@ -36,13 +44,41 @@
 <a-entity camera="" position="-25.18277 39.53185 314.63043" wasd-controls="" rotation="-6.875493541569885 14.094761760218255 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
 <a-light type="ambient" color="#FEF09C"></a-light>
 
-<a-sound src="src:url(corazon.mp3)" autoplay="true" position="-211 -9 4" volume="0.5" loop="true" type="ambient"></a-sound>
-<a-sound src="src:url(corazon.mp3)" autoplay="true" position="-25 40 315" volume="0.5" loop="true" type="ambient"></a-sound>
-
+<!-- <a-sound src="src:url(corazon.mp3)" autoplay="true" position="-211 -9 4" volume="0.5" loop="true" type="ambient"></a-sound>
+<a-sound src="src:url(corazon.mp3)" autoplay="true" position="-25 40 315" volume="0.5" loop="true" type="ambient"></a-sound> -->
+   <a-entity
+          id="visuales"
+          geometry="primitive: box; "
+          material="src:#vid;side:double;height:800;width:1280"
+          position="0 -15 0"
+          scale="30 30 30"
+          play
+        >
+        </a-entity>
 
 </a-scene>
 
+   <script>
+      AFRAME.registerComponent("play", {
+        init: function() {
+          this.onClick = this.onClick.bind(this);
+        },
+        play: function() {
+          window.addEventListener("click", this.onClick);
+        },
+        pause: function() {
+          window.removeEventListener("click", this.onClick);
+        },
+        onClick: function(evt) {
+          var video = document.getElementById("vid");
 
+          if (!video) {
+            return;
+          }
+          video.play();
+        }
+      });
+    </script>
 
 
 
